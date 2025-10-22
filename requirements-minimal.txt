@@ -1,0 +1,21 @@
+# Minimal requirements for HER implementation
+# Use this if you encounter MuJoCo installation issues
+
+# Core dependencies
+torch>=1.9.0
+numpy>=1.21.0
+gym>=0.21.0
+gymnasium>=0.26.0
+
+# Fetch environments (this will install gym-robotics)
+gym-robotics>=1.0.0
+
+# Visualization and logging
+tensorboard>=2.8.0
+matplotlib>=3.5.0
+
+# Utilities
+tqdm>=4.62.0
+
+# Development dependencies
+pytest>=6.0.0

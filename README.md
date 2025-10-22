@@ -18,21 +18,50 @@ Hindsight Experience Replay is a technique that allows agents to learn from fail
 
 ## Installation
 
-1. Clone the repository:
+### Quick Start
+
+1. **Clone the repository:**
 ```bash
-git clone <repository-url>
-cd HER
+git clone https://github.com/Tushar-Tyagi/hindsight-experience-replay.git
+cd hindsight-experience-replay
 ```
 
-2. Install dependencies:
+2. **Create virtual environment (recommended):**
 ```bash
+conda create -n her_env python=3.9
+conda activate her_env
+# Or using venv: python -m venv her_env && source her_env/bin/activate
+```
+
+3. **Install dependencies:**
+```bash
+# Option 1: Full installation (includes MuJoCo)
 pip install -r requirements.txt
+
+# Option 2: Minimal installation (if MuJoCo issues)
+pip install -r requirements-minimal.txt
 ```
 
-3. Install MuJoCo (if not already installed):
+4. **Install MuJoCo (required for Fetch environments):**
 ```bash
-# Follow MuJoCo installation instructions for your system
-# https://mujoco.readthedocs.io/en/latest/installation.html
+# Install MuJoCo
+pip install mujoco
+
+# Set environment variable
+export MUJOCO_PATH=$(python -c "import mujoco; print(mujoco.__file__.replace('__init__.py', ''))")
+
+# Verify installation
+python -c "import mujoco; print('MuJoCo installed successfully')"
+```
+
+### Detailed Installation
+
+For detailed installation instructions, including platform-specific setup and troubleshooting, see [INSTALL.md](INSTALL.md).
+
+### Verify Installation
+
+```bash
+python test_her.py
 ```
 
 ## Quick Start

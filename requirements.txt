@@ -4,14 +4,10 @@ numpy>=1.21.0
 gym>=0.21.0
 gymnasium>=0.26.0
 
-# MuJoCo dependencies
-mujoco>=2.1.0
-mujoco-py>=2.1.0
+# Fetch environments (includes gym-robotics)
+gym-robotics>=1.0.0
 
-# Fetch environments
-gym-robotics>=1.2.0
-
-# MPI for distributed training
+# MPI for distributed training (optional)
 mpi4py>=3.1.0
 
 # Visualization and logging
@@ -27,3 +23,6 @@ wandb>=0.12.0
 pytest>=6.0.0
 black>=21.0.0
 flake8>=4.0.0
+
+# Note: MuJoCo installation requires additional setup
+# See INSTALL.md for detailed installation instructions
